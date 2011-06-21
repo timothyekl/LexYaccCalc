@@ -104,3 +104,26 @@ describe "order of operations" do
     calculate("1 + (2 * 3 - 4 * (5 / (6 - 7))) * 8").should == 209
   end
 end
+
+describe "negation" do
+  it "negates single integers" do
+    calculate("-1").should == -1
+    calculate("-10").should == -10
+  end
+
+  it "operates on negative numbers" do
+    calculate("-1 + 2").should == 1
+    calculate("2 + -1").should == 1
+    calculate("-1 * 2").should == -2
+    calculate("3 * -2").should == -6
+    calculate("-6 / 2").should == -3
+    calculate("6 / -2").should == -3
+  end
+
+  it "respects parentheses with negative numbers" do
+    calculate("(-1)").should == -1
+    calculate("-(1)").should == -1
+    calculate("-(-1)").should == 1
+    calculate("- ( -1 * -2 * -3)").should == 6
+  end
+end
