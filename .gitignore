@@ -1,1 +1,6 @@
 tags
+
+# Compiled files
+calc
+lex.yy.[co]
+y.tab.[cho]
