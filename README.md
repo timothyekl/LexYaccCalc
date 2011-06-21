@@ -10,8 +10,7 @@ Simply run `make`, then `./calc` to run the calculator.
 In a running calculator, type an expression and press Enter to
 evaluate. The calculator supports the four basic arithmetic
 binary expressions as well as parentheses for expression grouping.
-Unary minus (i.e. "negative numbers") are not supported, nor is
-exponentiation.
+Exponentiation is not supported.
 
 ### Testing
 
